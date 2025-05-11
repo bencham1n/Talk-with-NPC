@@ -1,0 +1,115 @@
+#dialog-box {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #36393f;
+    color: #dcddde;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    width: 350px;
+    max-width: 90%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+    border: none;
+}
+
+#dialog-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Väčší odstup od správy */
+    border-bottom: 2px dashed #ffa502; /* Oranžová, hrubšia a prerušovaná čiara */
+    padding-bottom: 10px; /* Väčší priestor pod čiarou */
+}
+
+#npc-meno {
+    font-weight: bold;
+    font-size: 16px;
+    color: #b9bbbe;
+    margin-right: 15px; /* Väčší odstup od kontajnera roly */
+    text-shadow: 1px 1px 2px #000; /* Jemný tieň pre meno */
+    letter-spacing: 0.3px; /* Jemné rozostupy písmen */
+    margin-bottom: 0;
+}
+
+/* Kontajner pre ikonu a rolu */
+#npc-role-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1); /* Jemné tmavé pozadie pre rolu */
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: 1px solid #72767d; /* Jemný rámik okolo roly */
+}
+
+/* Ikona roly */
+#npc-rola-ikona {
+    font-size: 12px;
+    color: #72767d;
+    margin-right: 5px;
+}
+
+/* Text roly */
+#npc-role {
+    font-size: 11px;
+    color: #dcddde; /* Svetlejší text pre rolu na tmavšom pozadí */
+    font-style: italic; /* Kurzíva pre rolu */
+}
+
+#dialog-message {
+    font-size: 16px;
+    color: #dcddde;
+    line-height: 1.3;
+    margin-top: 15px; /* Väčší horný okraj pre správu */
+    margin-bottom: 0;
+}
+
+#dialog-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.option-button {
+    background-color: #43b581;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    flex-grow: 1;
+    min-width: 0;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.option-button:last-child {
+    background-color: #f04747;
+}
+
+.option-button:hover {
+    background-color: #5cb85c;
+    transform: scale(1.02);
+}
+
+.option-button:last-child:hover {
+    background-color: #d9534f;
+}
+
+.option-button i {
+    font-size: 1.2em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
